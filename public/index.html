@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Login and Registration Form</title>
+<link rel="stylesheet" type="text/css" href="style.css"> 
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="innerBox" id="card">
+                <div class="cardFront">
+                    <h2>LOGIN</h2>
+                        <form action="/login" method="POST"> 
+                            <input type = "username" class="inputBox" name="username" placeholder="Username" required>
+                            <input type = "password" class="inputBox" name="password" placeholder="Password" required>
+                            <button type="Log in" class="LoginBtn"> Log In</button>
+                            <ul id="events"></ul>
+                        </form>
+                        <button type="button" class="btn" onclick="openRegister()">Need an account?</button>
+                </div>
+                <div class="cardBack">
+                    <h2>REGISTER</h2>
+                        <form action="/register" method="POST">  
+                            <input type = "username" class="inputBox" name="username" placeholder="Username" required>
+                            <input type = "email" class="inputBox" name="email" placeholder="E-mail address" required>
+                            <input type = "password" class="inputBox" name="password" placeholder="Password" required>
+                            <button type="Log in" class="LoginBtn" onclick="openRegister()"> Sıgn Up</button>
+                        </form>
+                        <button type="button" class="btn" onclick="openLogin()">Already have an account?</button>
+                </div>
+         </div>
+         </div>
+    </div>
+<script>
+    var card= document.getElementById("card");
+    function openRegister(){
+        card.style.transform="rotateY(-180deg)";
+    }
+    function openLogin(){
+        card.style.transform="rotateY(0deg)";
+    }
+</script>
+
+</body>
+</html>
